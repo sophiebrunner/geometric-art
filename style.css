@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: snow;
+  height: 100%;
+  _border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.geometric {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+  width: 50vmin;
+  height: 50vmin;
+  border: 0.4rem solid black;
+  border-radius: 0.2rem;
+  background-color: gray;
+  background-image: linear-gradient(
+      135deg,
+      hotpink,
+      hotpink 50%,
+      transparent 50%
+    ),
+    linear-gradient(white, white);
+  background-size: 20vmin 20vmin, 40vmin 40vmin;
+  background-position: 25% 25%, center center;
+  background-repeat: no-repeat;
+}
+
+.geometric::before {
+  content: "";
+  display: block;
+  width: 30vmin;
+  height: 30vmin;
+  background-image: linear-gradient(black 50%, transparent 50%);
+  background-size: 100% 10%;
+  background-position: center center;
+}
